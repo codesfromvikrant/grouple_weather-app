@@ -5,8 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-  },
-  plugins: [],
+    extend: {
+      fontFamily: {
+        "bebas": ["Bebas Neue", "sans-serif"]
+      },
+      colors: {
+        "glassywhite": "#ffffff16",
+      }
+    },
+    plugins: [],
+  }
 }
-
