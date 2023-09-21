@@ -6,6 +6,7 @@ import mumbai from "../assets/icons/popular_citites/mumbai.jpg";
 import newyork from "../assets/icons/popular_citites/newyork.jpg";
 import dubai from "../assets/icons/popular_citites/dubai.jpg";
 import paris from "../assets/icons/popular_citites/paris.jpg";
+import { nanoid } from "nanoid";
 
 const PopularCities = () => {
   const [cities, setCities] = useState([
@@ -44,7 +45,7 @@ const PopularCities = () => {
       height: "150px",
     };
     return (
-      <div>
+      <div key={nanoid()}>
         <div style={style} className="rounded-md" />
         <span className="text-sm font-medium">{city.name}</span>
       </div>

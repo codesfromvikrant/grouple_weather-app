@@ -16,7 +16,7 @@ const Current = () => {
               alt={current.condition?.text}
               className="w-20 h-20"
             />
-            <span className="text-7xl font-semibold">{current.temp_c}</span>
+            <span className="text-7xl font-bold">{current.temp_c}</span>
             <span className="mt-3 text-3xl font-bold">&deg;</span>
             <span className="text-3xl font-bold mt-2">C</span>
           </div>

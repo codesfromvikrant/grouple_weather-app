@@ -43,6 +43,10 @@
   --primary: #E4F1FF;
   --slate-200: #e2e8f0;
   --glassywhite: #ffffff16;
+
+  --temp: #2dd4be46;
+  --blue: #60a5fa5d;
+  --humidity: #38bff83f;
 }
 
 html {

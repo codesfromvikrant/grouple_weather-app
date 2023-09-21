@@ -35,14 +35,15 @@ const DateTimeLocation = () => {
   const todate = date.getDate();
   const month = date.getMonth();
   const year = date.getFullYear();
-  const hour = date.getHours();
+  let hour = date.getHours();
+  hour = hour > 12 ? hour - 12 : hour;
   const minute = date.getMinutes();
 
   return (
     <div className="">
       <div className="text-blue-600 font-bold font-bebas flex justify-start items-center gap-2 text-4xl">
         <span>
-          {hour > 12 ? `${hour - 12}` : hour} :{" "}
+          {hour < 10 ? `0${hour}` : hour} :{" "}
           {minute < 10 ? `0${minute}` : minute}
           {hour > 12 ? " PM" : " AM"}
         </span>
