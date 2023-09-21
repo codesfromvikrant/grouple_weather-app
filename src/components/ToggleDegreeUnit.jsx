@@ -28,7 +28,7 @@ const ToggleDegreeUnit = () => {
       >
         <div className="w-[0.8rem] h-[0.8rem] bg-blue-600 rounded-full"></div>
       </div>
-      <p>Farenhite</p>
+      <p>Farenheite</p>
     </div>
   );
 };

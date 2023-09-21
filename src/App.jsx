@@ -9,14 +9,11 @@ import {
 } from "./features/realtimeSlice";
 import { setDayForecast } from "./features/forecastSlice";
 import { useDispatch, useSelector } from "react-redux";
-import useLocation from "./hooks/useLocation";
 
 const App = () => {
   const dispatch = useDispatch();
   const latitude = useSelector((state) => state.navigation.latitude);
   const longitude = useSelector((state) => state.navigation.longitude);
-
-  const { findMyLocation } = useLocation();
 
   const getRealTimeWeather = async () => {
     try {
@@ -41,11 +38,20 @@ const App = () => {
   useEffect(() => {
     getRealTimeWeather();
     getForecastWeather();
+
+    const intervalId = setInterval(() => {
+      getRealTimeWeather();
+      getForecastWeather();
+    }, 5 * 60 * 1000);
+    return () => clearInterval(intervalId);
   }, [latitude, longitude]);
 
   /// Get User Location
   const getGeoLocation = () => {
-    findMyLocation();
+    navigator.geolocation.getCurrentPosition(function (position) {
+      dispatch(setLatitude(position.coords.latitude));
+      dispatch(setLongitude(position.coords.longitude));
+    });
   };
   useEffect(() => {
     getGeoLocation();

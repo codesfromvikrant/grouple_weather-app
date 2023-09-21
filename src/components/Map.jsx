@@ -7,10 +7,14 @@ import { useSelector } from "react-redux";
 const Map = () => {
   const latitude = useSelector((state) => state.navigation.latitude);
   const longitude = useSelector((state) => state.navigation.longitude);
+  const handleMapClick = (e) => {
+    const { lat, lng } = e.latlng;
+    alert(`Latitude: ${lat}\nLongitude: ${lng}`);
+  };
   return (
     <MapContainer
       center={[latitude, longitude]}
-      zoom={13}
+      zoom={5}
       scrollWheelZoom={true}
     >
       <TileLayer
@@ -22,6 +26,7 @@ const Map = () => {
           A pretty CSS3 popup. <br /> Easily customizable.
         </Popup>
       </Marker>
+      <ClickHandler />
     </MapContainer>
   );
 };

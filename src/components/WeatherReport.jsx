@@ -12,7 +12,7 @@ const WeatherReport = () => {
       <Header />
       <section className="flex justify-start items-start flex-col gap-5 mt-5 h-max ">
         <Current />
-        <Map />
+        {/* <Map /> */}
       </section>
       <PopularCities />
       <DayForecast />
