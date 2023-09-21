@@ -1,3 +1,4 @@
+
 # Weather App
 
 This Weather App is a user-friendly web application designed to provide real-time weather data and a weekly forecast based on the user's location. It leverages modern web technologies and APIs to deliver accurate and up-to-date weather information. Whether you're planning your day or a trip, the Weather App has you covered with detailed weather insights.
@@ -17,8 +18,7 @@ Github : https://github.com/codesfromvikrant/grouple_weather_app
 ## Screenshots
 
 
-![Home Page](https://github.com/codesfromvikrant/grouple_weather_app/blob/main/src/assets/weather_app.png)
-![Home Page](https://github.com/codesfromvikrant/grouple_weather_app/blob/main/src/assets/weather_app%40.png)
+
 
 
 
@@ -44,6 +44,8 @@ Intuitive User Interface: Enjoy a user-friendly and aesthetically pleasing desig
 Customizable Units: Tailor the app to your preferences by selecting units such as Celsius or Fahrenheit.
 
 ## Tech Stack
+
+
 
 The Weather App leverages the following technologies:
 
