@@ -18,5 +18,12 @@ const forecastWeather = async (location) => {
   return data;
 }
 
-export { currentWeather, forecastWeather };
+const searchLocation = async (location) => {
+  const { data } = await axios.get(
+    `${BASE_URL}/search.json?key=${API_KEY}&q=${location}`
+  );
+  return data;
+}
+
+export { currentWeather, forecastWeather, searchLocation };
 
