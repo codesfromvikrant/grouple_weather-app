@@ -52,12 +52,10 @@ const Header = () => {
         <div className="flex justify-start items-center sm:flex-row flex-col gap-3 mb-3">
           <button
             onClick={() => findMyLocation()}
-            className="flex justify-start items-center gap-2 bg-white p-3 rounded-lg text-gray-800 sm:w-max w-full"
+            className="flex justify-start items-center gap-2 bg-white p-3 rounded-lg text-slate-800 sm:w-max w-full"
           >
             <BiCurrentLocation className="text-xl" />
-            <span className="w-max text-sm font-semibold">
-              Find My location
-            </span>
+            <span className="w-max text-sm font-bold">Find My location</span>
           </button>
 
           <div className="w-full relative">
@@ -67,7 +65,7 @@ const Header = () => {
               ref={inputRef}
               onChange={locationList}
               placeholder="Search Location"
-              className="p-3 rounded-lg text-sm placeholder:font-medium font-bold w-full bg-white"
+              className="p-3 rounded-lg text-sm placeholder:font-medium font-bold w-full outline-[1px] outline-blue-300 bg-white"
             />
             <div
               ref={dropRef}

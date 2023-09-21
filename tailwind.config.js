@@ -7,10 +7,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "bebas": ["Bebas Neue", "sans-serif"]
+        "bebas": ["Bebas Neue", "sans-serif"],
+        "Inter": ["Inter", "sans-serif"],
       },
       colors: {
-        "glassywhite": "#ffffff16",
+        "glassywhite": "#ffffff25",
+        "glassyblue": "#0871f11b",
       },
       screens: {
         "md01": "800px",

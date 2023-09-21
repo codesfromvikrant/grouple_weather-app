@@ -1,21 +1,36 @@
 import React from "react";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { Marker, Popup } from "react-leaflet";
-import { useSelector } from "react-redux";
+import { Marker, Popup, useMapEvents } from "react-leaflet";
+import { useSelector, useDispatch } from "react-redux";
+import { setLatitude, setLongitude } from "../features/navigationSlice";
 
-const Map = () => {
+const Map = ({ mapheight }) => {
+  const dispatch = useDispatch();
   const latitude = useSelector((state) => state.navigation.latitude);
   const longitude = useSelector((state) => state.navigation.longitude);
-  const handleMapClick = (e) => {
-    const { lat, lng } = e.latlng;
-    alert(`Latitude: ${lat}\nLongitude: ${lng}`);
+
+  const LocationFinderDummy = () => {
+    const map = useMapEvents({
+      click(e) {
+        map.locate();
+        const { lat, lng } = e.latlng;
+        dispatch(setLatitude(lat));
+        dispatch(setLongitude(lng));
+        console.log(e.latlng);
+      },
+    });
+    return null;
   };
+
   return (
     <MapContainer
       center={[latitude, longitude]}
       zoom={5}
       scrollWheelZoom={true}
+      onClick={(e) => {
+        console.log("hello");
+      }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -26,7 +41,10 @@ const Map = () => {
           A pretty CSS3 popup. <br /> Easily customizable.
         </Popup>
       </Marker>
-      <ClickHandler />
+      <div className="absolute text-xl font-extrabold text-blue-600 z-[99]">
+        Hello
+      </div>
+      <LocationFinderDummy />
     </MapContainer>
   );
 };
