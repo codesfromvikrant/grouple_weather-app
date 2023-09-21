@@ -40,6 +40,7 @@ const App = () => {
     getForecastWeather();
   }, [latitude, longitude]);
 
+  /// Get User Location
   const getGeoLocation = () => {
     navigator.geolocation.getCurrentPosition(function (position) {
       dispatch(setLatitude(position.coords.latitude));
