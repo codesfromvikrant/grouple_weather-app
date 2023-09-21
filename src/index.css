@@ -42,6 +42,7 @@
 :root {
   --primary: #E4F1FF;
   --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
   --glassywhite: #ffffff25;
 
   --temp: #2dd4be46;
@@ -68,7 +69,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--slate-200);
+  background: var(--slate-300);
   border-radius: 8px;
   width: 5px;
 }

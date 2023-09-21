@@ -74,7 +74,7 @@ const PopularCities = () => {
     );
   });
   return (
-    <section className="mt-3">
+    <section className="sm:mt-3 mt-4">
       <h3 className="text-slate-800 text-lg mb-1 font-extrabold">
         Popular Cities
       </h3>
