@@ -16,6 +16,7 @@ export default {
       },
       screens: {
         "md01": "800px",
+        "sm01": "500px",
         // "md02": "768px",
       },
     },

@@ -47,39 +47,41 @@ const Graph = () => {
   }, [forecastDate, weeklyforecast]);
 
   return (
-    <div className="bg-white mt-6 sm:p-4  rounded-md">
-      <Line
-        data={{
-          labels: labels,
-          datasets: [
-            {
-              id: 1,
-              fill: true,
-              label: "Temperature in Celsius",
-              data: temp,
-              backgroundColor: "#2dd4be46",
-              borderColor: "#2dd4bf",
-            },
-            {
-              id: 2,
-              fill: true,
-              label: "Humidity in %",
-              data: humidity,
-              backgroundColor: "#38bff83f",
-              borderColor: "#38bdf8",
-            },
-            {
-              id: 3,
-              fill: true,
-              label: "Rain Chance in %",
-              data: rainChance,
-              backgroundColor: "#60a5fa5d",
-              borderColor: "#3b82f6",
-            },
-          ],
-        }}
-      />
-    </div>
+    <section className="overflow-x-auto pb-1">
+      <div className="bg-white mt-6 sm:p-4 sm01:w-full w-[40rem] rounded-md">
+        <Line
+          data={{
+            labels: labels,
+            datasets: [
+              {
+                id: 1,
+                fill: true,
+                label: "Temperature in Celsius",
+                data: temp,
+                backgroundColor: "#2dd4be46",
+                borderColor: "#2dd4bf",
+              },
+              {
+                id: 2,
+                fill: true,
+                label: "Humidity in %",
+                data: humidity,
+                backgroundColor: "#38bff83f",
+                borderColor: "#38bdf8",
+              },
+              {
+                id: 3,
+                fill: true,
+                label: "Rain Chance in %",
+                data: rainChance,
+                backgroundColor: "#60a5fa5d",
+                borderColor: "#3b82f6",
+              },
+            ],
+          }}
+        />
+      </div>
+    </section>
   );
 };
 

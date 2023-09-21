@@ -13,7 +13,7 @@ const WeatherReport = () => {
       <section className="mt-3">
         <Current />
 
-        <h3 className="text-slate-800 text-lg mt-3 mb-1 font-extrabold">
+        <h3 className="text-slate-800 text-lg sm:mt-3 mt-4 mb-1 font-extrabold">
           Find Location on Map
         </h3>
 
