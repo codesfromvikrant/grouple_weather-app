@@ -55,12 +55,10 @@ html {
 }
 
 .leaflet-container {
-  height: 11rem;
+  height: 10rem !important;
   width: 100%;
   border-radius: 0.6rem;
-
-  z-index: 90 !important;
-  position: relative;
+  z-index: 10 !important;
 }
 
 ::-webkit-scrollbar {
@@ -72,4 +70,9 @@ html {
   background: var(--slate-200);
   border-radius: 8px;
   width: 5px;
+}
+
+#togglebar {
+  width: 2.5rem !important;
+  cursor: pointer !important;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { BiCurrentLocation } from "react-icons/bi";
 import { setSearchLocations } from "../features/navigationSlice";
 import { searchLocation } from "../api";
@@ -15,6 +15,26 @@ const Header = () => {
   );
   const { findMyLocation } = useLocation();
 
+  const inputRef = useRef(null);
+  const dropRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        dropRef.current &&
+        !dropRef.current.contains(e.target) &&
+        !inputRef.current.contains(e.target)
+      ) {
+        setValue("");
+        dispatch(setSearchLocations([]));
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [inputRef]);
+
   const locationList = async (e) => {
     setValue(e.target.value);
     try {
@@ -29,25 +49,30 @@ const Header = () => {
   return (
     <header>
       <div className="w-full">
-        <div className="flex justify-start items-center gap-3 mb-3">
+        <div className="flex justify-start items-center sm:flex-row flex-col gap-3 mb-3">
           <button
             onClick={() => findMyLocation()}
-            className="flex justify-start items-center gap-2 bg-white p-3 rounded-lg text-gray-800 "
+            className="flex justify-start items-center gap-2 bg-white p-3 rounded-lg text-gray-800 sm:w-max w-full"
           >
             <BiCurrentLocation className="text-xl" />
             <span className="w-max text-sm font-semibold">
               Find My location
             </span>
           </button>
+
           <div className="w-full relative">
             <input
               type="text"
               value={value}
+              ref={inputRef}
               onChange={locationList}
               placeholder="Search Location"
               className="p-3 rounded-lg text-sm placeholder:font-medium font-bold w-full bg-white"
             />
-            <div className="absolute top-[3rem] w-full bg-glassywhite backdrop-blur-md z-[99]">
+            <div
+              ref={dropRef}
+              className="absolute top-[3rem] w-full bg-glassywhite backdrop-blur-md z-[99]"
+            >
               {searchLocations?.length > 0 && <SearchDroplist />}
             </div>
           </div>

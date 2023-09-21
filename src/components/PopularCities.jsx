@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { BiSolidAddToQueue } from "react-icons/bi";
 import tokyo from "../assets/icons/popular_citites/tokyo.jpg";
 import hongkong from "../assets/icons/popular_citites/hong-kong.jpg";
 import mumbai from "../assets/icons/popular_citites/mumbai.jpg";
 import newyork from "../assets/icons/popular_citites/newyork.jpg";
 import dubai from "../assets/icons/popular_citites/dubai.jpg";
 import paris from "../assets/icons/popular_citites/paris.jpg";
+import newcity from "../assets/icons/popular_citites/new-city.png";
 import { nanoid } from "nanoid";
 
 const PopularCities = () => {
@@ -52,16 +52,11 @@ const PopularCities = () => {
     );
   });
   return (
-    <section className="mt-6">
+    <section className="mt-3">
+      <h3 className="text-gray-700 text-lg mb-1 font-extrabold">
+        Popular Cities
+      </h3>
       <div className="flex justify-start items-start gap-6 overflow-x-auto pb-2">
-        <div className="min-w-[150px] h-[150px] cursor-pointer bg-white shadow rounded-md flex justify-center items-center">
-          <div className="">
-            <div className="w-12 h-12 bg-slate-200 flex justify-center items-center rounded-full mx-auto">
-              <BiSolidAddToQueue className="text-2xl mx-auto text-slate-600" />
-            </div>
-            <p className="text-base font-semibold text-center">Add City</p>
-          </div>
-        </div>
         {list}
       </div>
     </section>

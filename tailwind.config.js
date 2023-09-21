@@ -11,7 +11,11 @@ export default {
       },
       colors: {
         "glassywhite": "#ffffff16",
-      }
+      },
+      screens: {
+        "md01": "800px",
+        // "md02": "768px",
+      },
     },
     plugins: [],
   }

@@ -47,7 +47,7 @@ const Graph = () => {
   }, [forecastDate, weeklyforecast]);
 
   return (
-    <div className="bg-white mt-6 p-4 rounded-md">
+    <div className="bg-white mt-6 sm:p-4  rounded-md">
       <Line
         data={{
           labels: labels,

@@ -12,7 +12,9 @@ export const forecastSlice = createSlice({
   initialState,
   reducers: {
     setForecastDate(state, action) {
-      state.forecast_date = action.payload;
+      const newdate = new Date(action.payload);
+      state.forecast_date = `${newdate.getFullYear()}-${newdate.getMonth() + 1 < 10 ? `0${newdate.getMonth() + 1}` : newdate.getMonth() + 1
+        }-${newdate.getDate() < 10 ? `0${newdate.getDate()}` : newdate.getDate()}`;
     },
     setDayForecast(state, action) {
       state.day_forecast = action.payload;
