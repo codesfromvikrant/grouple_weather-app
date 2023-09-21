@@ -15,7 +15,7 @@ const ToggleDegreeUnit = () => {
   };
 
   return (
-    <div className="flex justify-center items-center gap-2 text-xs font-bold w-max">
+    <div className="flex justify-center items-center gap-2 text-sm text-slate-800 font-bold w-max">
       <p>Celcius</p>
       <div
         id="togglebar"

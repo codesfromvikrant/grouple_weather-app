@@ -10,9 +10,14 @@ const WeatherReport = () => {
   return (
     <div className="max-w-5xl  mx-auto px-4">
       <Header />
-      <section className="flex justify-start items-start flex-col gap-5 mt-5 h-max ">
+      <section className="mt-3">
         <Current />
-        {/* <Map /> */}
+
+        <h3 className="text-slate-800 text-lg mt-3 mb-1 font-extrabold">
+          Find Location on Map
+        </h3>
+
+        <Map />
       </section>
       <PopularCities />
       <DayForecast />

@@ -10,10 +10,10 @@ const Current = () => {
   const tempUnit = useSelector((state) => state.realtime.temp_unit);
 
   return (
-    <div className="w-full md01:py-0 sm:py-3 py-5  px-4 bg-white rounded-xl h-full flex justify-between items-center md01:flex-row flex-col">
+    <div className="w-full md01:py-3 sm:py-3 py-5  px-4 bg-glassywhite shadow-md rounded-xl h-full flex justify-between items-center md01:flex-row flex-col">
       <DateTimeLocation />
       <div className="w-max flex justify-center items-center sm:my-0 my-2">
-        <div className="flex justify-start items-start text-blue-600">
+        <div className="flex justify-start items-start text-slate-600 font-Inter">
           <span className="text-8xl font-semibold">
             {tempUnit == "c" ? current?.temp_c : current.temp_f}
           </span>
@@ -29,7 +29,7 @@ const Current = () => {
         />
       </div>
 
-      <div className="flex md01:justify-end sm:justify-center justify-start items-center md01:flex-col sm:flex-row flex-col md01:gap-0 sm:gap-2 gap-0 text-gray-700">
+      <div className="flex md01:justify-end sm:justify-center justify-start items-center md01:flex-col sm:flex-row flex-col md01:gap-0 sm:gap-2 gap-0 text-gray-800">
         <div className="flex md01:justify-end justify-center items-center gap-1 w-full">
           <p className="text-end text-base sm:font-bold font-extrabold w-max">
             Humidity is {current.humidity}%

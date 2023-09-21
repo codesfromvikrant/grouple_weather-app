@@ -41,7 +41,7 @@ const DateTimeLocation = () => {
 
   return (
     <div className="flex justify-start items-start md01:flex-col sm:flex-row flex-col md01:gap-0 sm:gap-4 gap-0">
-      <div className="text-blue-600 font-bold font-bebas flex justify-start items-center gap-2 text-4xl w-max">
+      <div className="text-slate-600 font-bold font-bebas flex justify-start items-center gap-2 text-4xl w-max">
         <span>
           {hour < 10 ? `0${hour}` : hour} :{" "}
           {minute < 10 ? `0${minute}` : minute}
@@ -52,10 +52,10 @@ const DateTimeLocation = () => {
         </span>
       </div>
       <div className="">
-        <div className="text-sm font-medium w-max">
+        <div className="text-sm font-semibold text-gray-800 w-max">
           {days[day]} {todate} {months[month]} {year}
         </div>
-        <p className="font-bold md01:text-base text-sm text-slate-700 w-max">
+        <p className="font-bold md01:text-base text-sm text-slate-900 w-max">
           {location.name}, {location.region}, {location.country}
         </p>
       </div>
