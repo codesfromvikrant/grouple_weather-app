@@ -31,7 +31,7 @@ const Header = () => {
       <div className="w-full">
         <div className="flex justify-start items-center gap-3 mb-3">
           <button
-            onClick={findMyLocation()}
+            onClick={() => findMyLocation()}
             className="flex justify-start items-center gap-2 bg-white p-3 rounded-lg text-gray-800 "
           >
             <BiCurrentLocation className="text-xl" />
