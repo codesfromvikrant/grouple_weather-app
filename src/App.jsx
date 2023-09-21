@@ -15,16 +15,6 @@ const App = () => {
   const latitude = useSelector((state) => state.navigation.latitude);
   const longitude = useSelector((state) => state.navigation.longitude);
 
-  const getGeoLocation = () => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      dispatch(setLatitude(position.coords.latitude));
-      dispatch(setLongitude(position.coords.longitude));
-    });
-  };
-  useEffect(() => {
-    getGeoLocation();
-  }, []);
-
   const getRealTimeWeather = async () => {
     try {
       const location = `${latitude},${longitude}`;
@@ -49,6 +39,16 @@ const App = () => {
     getRealTimeWeather();
     getForecastWeather();
   }, [latitude, longitude]);
+
+  const getGeoLocation = () => {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      dispatch(setLatitude(position.coords.latitude));
+      dispatch(setLongitude(position.coords.longitude));
+    });
+  };
+  useEffect(() => {
+    getGeoLocation();
+  }, []);
 
   return (
     <div>
