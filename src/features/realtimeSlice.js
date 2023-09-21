@@ -20,9 +20,13 @@ export const realtimeSlice = createSlice({
     setAirQuality(state, action) {
       state.air_quality = action.payload;
     },
+    setTempUnit(state, action) {
+      state.temp_unit = action.payload;
+    }
+
   },
 });
 
-export const { setLocation, setCurrent, setAirQuality } = realtimeSlice.actions;
+export const { setLocation, setCurrent, setAirQuality, setTempUnit } = realtimeSlice.actions;
 
 export default realtimeSlice.reducer;

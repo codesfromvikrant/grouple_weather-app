@@ -5,6 +5,7 @@ import { searchLocation } from "../api";
 import { useDispatch, useSelector } from "react-redux";
 import SearchDroplist from "./SearchDroplist";
 import useLocation from "../hooks/useLocation";
+import ToggleDegreeUnit from "./ToggleDegreeUnit";
 
 const Header = () => {
   const [value, setValue] = useState("");
@@ -38,7 +39,7 @@ const Header = () => {
               Find My location
             </span>
           </button>
-          <div className="w-2/3 relative">
+          <div className="w-full relative">
             <input
               type="text"
               value={value}
@@ -50,6 +51,7 @@ const Header = () => {
               {searchLocations?.length > 0 && <SearchDroplist />}
             </div>
           </div>
+          <ToggleDegreeUnit />
         </div>
       </div>
     </header>
