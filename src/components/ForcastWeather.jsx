@@ -9,7 +9,7 @@ const ForcastWeather = () => {
     <div
       className={`${
         toggleSidebar ? "" : "lg:block hidden"
-      } " h-[100vh] z-[99] overflow-y-auto bg-blue-600 text-white p-4 lg:static fixed top-0 left-0"`}
+      } " h-[100vh] z-[99] overflow-y-auto w-max  bg-blue-600 text-white p-4 lg:static fixed top-0 left-0"`}
     >
       <WeekForecast />
     </div>
