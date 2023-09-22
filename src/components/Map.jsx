@@ -38,12 +38,9 @@ const Map = ({ mapheight }) => {
       />
       <Marker position={[latitude, longitude]}>
         <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
+          {`Your Position is ${latitude}, ${longitude} on the map.`}.
         </Popup>
       </Marker>
-      <div className="absolute text-xl font-extrabold text-blue-600 z-[99]">
-        Hello
-      </div>
       <LocationFinderDummy />
     </MapContainer>
   );

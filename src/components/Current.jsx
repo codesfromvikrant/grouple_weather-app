@@ -6,7 +6,7 @@ import { WiHumidity } from "react-icons/wi";
 import { FaWind } from "react-icons/fa";
 
 const Current = () => {
-  const { location, current } = useSelector((state) => state.realtime);
+  const { current } = useSelector((state) => state.realtime);
   const tempUnit = useSelector((state) => state.realtime.temp_unit);
 
   return (
@@ -29,12 +29,12 @@ const Current = () => {
         />
       </div>
 
-      <div className="flex md01:justify-end sm:justify-center justify-start items-center md01:flex-col sm:flex-row flex-col md01:gap-0 sm:gap-2 gap-0 text-gray-800">
+      <div className="flex md01:justify-end sm:justify-center justify-start items-center md01:flex-col sm:flex-row flex-col md01:gap-2 sm:gap-2 gap-0 text-gray-800">
         <div className="flex md01:justify-end justify-center items-center gap-1 w-full">
           <p className="text-end text-base sm:font-bold font-extrabold w-max">
             Humidity is {current.humidity}%
           </p>
-          <WiHumidity className="sm:text-3xl text-4xl text-slate-400" />
+          <WiHumidity className="sm:text-3xl text-4xl text-slate-600" />
         </div>
         <div className="flex md01:justify-end justify-center items-center gap-1 w-full">
           <p className="text-end text-base sm:font-bold font-extrabold w-max">
@@ -42,14 +42,14 @@ const Current = () => {
             {tempUnit == "c" ? current.feelslike_c : current.feelslike_f}
             <span>&deg;</span> {tempUnit == "c" ? "C" : "F"}
           </p>
-          <FaTemperatureLow className="text-slate-400 sm:text-2xl text-3xl" />
+          <FaTemperatureLow className="text-slate-600 sm:text-2xl text-3xl" />
         </div>
         {/*  */}
         <div className="flex md01:justify-end justify-center items-center gap-2 w-full">
           <p className="text-end text-base sm:font-bold font-extrabold w-max">
             Wind is Blowing at {current.wind_kph}Km/Hr
           </p>{" "}
-          <FaWind className="text-2xl text-slate-400" />
+          <FaWind className="text-2xl text-slate-600" />
         </div>
       </div>
     </div>

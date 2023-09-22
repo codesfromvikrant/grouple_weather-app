@@ -45,7 +45,7 @@ const WeekForecast = () => {
       <div
         key={nanoid()}
         onClick={() => showForecast(date)}
-        className=" bg-glassywhite hover:bg-blue-700 transition-all duration-300 p-3 rounded-md flex justify-start items-start flex-col w-full  cursor-pointer"
+        className=" bg-glassywhite hover:bg-blue-700 transition-all duration-300 p-3 rounded-md flex justify-start items-start flex-col   cursor-pointer"
       >
         <p className="font-bold text-sm tracking-wide mb-2">
           {months[date.getMonth()]} {date.getDate()} {date.getFullYear()}
@@ -77,13 +77,13 @@ const WeekForecast = () => {
   });
 
   return (
-    <div className="">
+    <>
       <div className="flex justify-start items-center gap-2 mb-2">
         <TiWeatherSnow className="text-2xl text-white" />
         <h3 className="text-xl font-extrabold">Weekly Forecast</h3>
       </div>
       <div className="grid grid-cols-1 gap-4">{list}</div>
-    </div>
+    </>
   );
 };
 
