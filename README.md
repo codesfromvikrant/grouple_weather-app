@@ -17,7 +17,7 @@ Github : https://github.com/codesfromvikrant/grouple_weather_app
 ## Screenshots
 
 
-![Home Page](https://github.com/codesfromvikrant/grouple_weather_app/blob/main/src/assets/weather_app.png)
+![Home Page](https://github.com/codesfromvikrant/grouple_weather_app/blob/main/src/assets/screenshots/weather_app_new.png)
 ![Home Page](https://github.com/codesfromvikrant/grouple_weather_app/blob/main/src/assets/weather_app%40.png)
 
 
