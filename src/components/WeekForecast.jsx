@@ -45,26 +45,26 @@ const WeekForecast = () => {
       <div
         key={nanoid()}
         onClick={() => showForecast(date)}
-        className=" bg-glassywhite hover:bg-blue-700 transition-all duration-300 p-3 rounded-md flex justify-start items-start flex-col   cursor-pointer"
+        className="  text-white bg-blue-700 transition-all duration-300 p-4 rounded-md  cursor-pointer"
       >
-        <p className="font-bold text-sm tracking-wide mb-2">
+        <p className="font-bold md:text-lg sm:text-base text-lg tracking-wide">
           {months[date.getMonth()]} {date.getDate()} {date.getFullYear()}
           {", "}
           {days[date.getDay()]}
         </p>
-        <div className="flex justify-start items-center text-gray-100 gap-1">
+        <div className="flex justify-start items-center text-gray-200 gap-1">
           <img
             src={`https:${item.day.condition.icon}`}
             alt={item.day.condition.text}
-            className="w-8 h-8"
+            className="w-10 h-10"
           />
-          <p className="font-semibold text-sm tracking-wide">
+          <p className="font-bold text-base tracking-wide">
             {item.day.condition.text}
           </p>
         </div>
-        <div className=" flex justify-start items-center text-gray-100 gap-2">
-          <FaTemperatureLow className="text-xl" />
-          <span className="w-max text-sm font-semibold tracking-wider">
+        <div className="ml-2 flex justify-start items-center text-gray-200 gap-2">
+          <FaTemperatureLow className="text-2xl" />
+          <span className="w-max text-base font-bold tracking-wider">
             {tempUnit == "c" ? item.day.maxtemp_c : item.day.maxtemp_f}&deg;/
             {tempUnit == "c"
               ? item.day.mintemp_c
@@ -78,11 +78,13 @@ const WeekForecast = () => {
 
   return (
     <>
-      <div className="flex justify-start items-center gap-2 mb-2">
-        <TiWeatherSnow className="text-2xl text-white" />
-        <h3 className="text-xl font-extrabold">Weekly Forecast</h3>
+      <div className="flex justify-start items-center gap-2 mt-6 mb-2">
+        <TiWeatherSnow className="text-2xl text-slate-800" />
+        <h3 className="text-xl text-slate-800 font-extrabold">
+          Weekly Forecast
+        </h3>
       </div>
-      <div className="grid grid-cols-1 gap-4">{list}</div>
+      <div className="grid sm:grid-cols-3 grid-cols-1 gap-4">{list}</div>
     </>
   );
 };

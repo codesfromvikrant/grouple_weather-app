@@ -1,5 +1,5 @@
 import React from "react";
-import ForcastWeather from "./ForcastWeather";
+
 import WeatherReport from "./WeatherReport";
 
 const Dashboard = () => {
@@ -8,7 +8,6 @@ const Dashboard = () => {
       <div className="w-full py-5 h-[100vh] overflow-y-auto">
         <WeatherReport />
       </div>
-      <ForcastWeather />
     </main>
   );
 };
