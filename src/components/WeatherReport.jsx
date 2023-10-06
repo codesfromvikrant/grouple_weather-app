@@ -4,7 +4,6 @@ import Header from "./Header";
 import Map from "./Map";
 import PopularCities from "./PopularCities";
 import DayForecast from "./DayForecast";
-import ToggleSidebar from "./ToggleSidebar";
 
 const WeatherReport = () => {
   return (
@@ -21,7 +20,6 @@ const WeatherReport = () => {
       </section>
       <PopularCities />
       <DayForecast />
-      <ToggleSidebar />
     </div>
   );
 };
